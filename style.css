@@ -1,0 +1,142 @@
+/* CSS Grid is two-dimensional grid-based style layout, works with columns and rows
+CSS Flexbox, on the other hand, is one-dimensional and allows either columns or rows AT ONCE */
+
+body{
+    background-color:rgb(48, 48, 48);
+}
+
+body,input,button{
+    font-family: "Manjari", Calibri, Tahoma, sans-serif;
+}
+
+#loading{
+    justify-content: center;
+    display: none;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+h2{
+    text-align: center;
+}
+
+.flex-container{
+    background-color: white;
+    padding: 2rem;
+    width: 50%;
+    box-shadow: 0rem 0.8rem 0.5rem rgb(0, 0, 0);
+    border-radius: 2rem 1rem 2rem 1rem;
+
+    position: relative;
+    animation-name: sliding;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.flex-item{
+    border-style: none none solid none;
+    border-color: rgb(62, 62, 62);
+    border-width: 1px;
+    padding-bottom: 1rem;
+}
+
+#results-card{
+    display: none;
+}
+
+@keyframes sliding{
+    from {left: 70rem;}
+    to {left: 0rem;}
+}
+
+.calculation-form, .results-items{
+    flex-direction: column;
+    display: flex;
+    row-gap: 1rem;
+}
+
+.calculation-form{
+    flex-wrap: wrap;
+}
+
+.form-row{
+    display: flex;
+}
+
+.symbol-calculation{
+    padding: 0.5rem;
+    text-align: center;
+    width: 5%;
+    background-color: rgb(194, 194, 194);
+    color: rgb(69, 69, 69);
+    border: 1px solid rgb(32, 26, 47);
+}
+
+.label-results{
+    padding: 0.5rem;
+    width: 40%;
+    background-color: rgb(194, 194, 194);
+    color: rgb(69, 69, 69);
+    border: 1px solid rgb(32, 26, 47);
+}
+
+.input-calculation, .input-results{
+    border: 1px solid rgb(32, 26, 47);
+    padding: 0.5rem;
+    outline: none; /* REMOVE BUTTON DEFAULT FOCUS BEHAVIOR */
+    transition: 0.5s;
+}
+
+
+.input-results{
+    background-color: rgb(219, 219, 219);
+}
+
+.input-calculation:focus{
+    border: 1px solid rgb(36, 25, 62);
+    background-color: rgb(235, 235, 235);
+}
+
+.input-calculation-row{
+    width: 95%;
+}
+
+.input-results-row{
+    width: 60%;
+}
+
+button{
+    border: none;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-calculate{
+    background-color: rgb(17, 6, 45);
+    transition-duration: 0.4s;
+}
+
+.btn-calculate:hover{
+    background-color: rgb(40, 5, 127);
+}
+
+.btn-calculate:focus{
+    border: 1px solid darkgreen;
+}
+
+.alert{
+    background-color: rgb(255, 151, 151);
+    color: rgb(132, 20, 20);
+    text-align: center;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manjari:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="app.js" defer></script>
+    <title>Loan Calculator</title>
+</head>
+<body>
+    <main>
+        <section class="flex-container">
+            <section class="flex-item" id="calculator-card">
+                <header class="heading">
+                    <h2>LOAN CALCULATOR</h2>
+                </header>
+
+                <form class="calculation-form" id="loan-form">
+                    <section class="form-row">
+                        <span class="symbol-calculation">$</span><input class="input-calculation input-calculation-row" id="amount" type="number" min="0" step="0.01" aria-label="Input loan amount" placeholder="Loan Ammount">
+                    </section>
+
+                    <section class="form-row">
+                        <span class="symbol-calculation">%</span><input class="input-calculation input-calculation-row" id="interest" type="number" min="0" step="0.01" aria-label="Input the interest" placeholder="Interest">
+                    </section>
+
+                    <input class="input-calculation" id="years" type="number" aria-label="Input the years to repay" min="0" placeholder="Years To Repay">
+
+                    <button type="submit" class="btn-calculate" aria-label="Click here to calculate the loan">Calculate</button>
+                </form>
+            </section>
+            <!-- LOADER -->
+            <section id="loading">
+                <img src="img/loading.gif" alt="">
+            </section>
+            <!-- RESULTS -->
+            <section class="flex-item" id="results-card">
+                <header>
+                    <h2>RESULTS</h2>
+                </header>
+
+                <section class="results-items">
+                    <section class="form-row">
+                        <span class="label-results">Monthly Payment</span><input class="input-results input-results-row" id="monthly-payment" type="number" aria-label="Results of monthly payment" disabled>
+                    </section>
+
+                    <section class="form-row">
+                        <span class="label-results">Total Payment</span><input class="input-results input-results-row" id="total-payment" type="number" aria-label="Results of total payment" disabled>
+                    </section>
+
+                    <section class="form-row">
+                        <span class="label-results">Total Interest</span><input class="input-results input-results-row" id="total-interest" type="number" aria-label="Results of total interest" disabled>
+                    </section>
+                </section>
+
+            </section>
+        </section>
+    </main>
+</body>
+</html>
